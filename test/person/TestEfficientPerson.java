@@ -5,6 +5,6 @@ import people.EfficientPerson;
  */
 public class TestEfficientPerson extends TestIPerson {
     public void initialize(){
-        john = new EfficientPerson("Gronathan","Platteau",21);
+        john = new EfficientPerson("Gronathan", "Platteau", 21);
     }
 }
