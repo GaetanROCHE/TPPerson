@@ -20,9 +20,13 @@ public class OutilsPerson {
         if(ageMin>ageMax)
             throw new IllegalArgumentException();
         ArrayList<IPerson> res = new ArrayList<>();
-        for(IPerson person : allPersons)
-            if(person.getAge(date) <= ageMax && person.getAge(date)>= ageMin)
-                res.add(person);
+        for(IPerson person : allPersons) {
+            try {
+                if (person.getAge(date) <= ageMax && person.getAge(date) >= ageMin)
+                    res.add(person);
+            } catch (Exception e) {
+            }
+        }
         return res;
     }
 
@@ -35,8 +39,11 @@ public class OutilsPerson {
     public int researchOlder(ArrayList<IPerson> allPersons, GregorianCalendar date){
         int ageMax = 0;
         for(IPerson person : allPersons)
-            if(person.getAge(date) > ageMax)
-                ageMax = person.getAge(date);
+            try {
+                if (person.getAge(date) > ageMax)
+                    ageMax = person.getAge(date);
+            }catch(Exception e){
+            }
         return ageMax;
     }
 }
