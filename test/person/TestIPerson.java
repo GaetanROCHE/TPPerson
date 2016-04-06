@@ -40,4 +40,9 @@ public abstract class TestIPerson {
     public void testGetAgeError(){
         john.getAge(new GregorianCalendar(1993, 5, 11));
     }
+
+    @Test
+    public void testGetAgeZero(){
+        Assert.assertEquals(0, john.getAge(new GregorianCalendar(1994, 24, 11)));
+    }
 }
