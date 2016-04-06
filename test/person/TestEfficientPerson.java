@@ -1,7 +1,7 @@
 import people.EfficientPerson;
 
 /**
- * Created by gaetan on 06/04/16.
+ * @author ROCHE Gaetan & PLATTEAU Jonathan
  */
 public class TestEfficientPerson extends TestIPerson {
     public void initialize(){

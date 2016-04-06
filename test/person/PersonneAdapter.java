@@ -4,7 +4,7 @@ import persons.IPerson;
 import java.util.GregorianCalendar;
 
 /**
- * Created by jonat on 06/04/2016.
+ * @author ROCHE Gaetan & PLATTEAU Jonathan
  */
 class PersonneAdapter extends Personne implements IPerson {
 
