@@ -51,4 +51,14 @@ public class TestOutilsPerson {
     public void testResearchOlder(){
         Assert.assertEquals(45, tool.researchOlder(persons, date));
     }
+
+    @Test
+    public void testAnonymousResearchOlder(){
+        Assert.assertEquals(45, tool.researchOlder(persons, date));
+        for(IPerson p : persons) {
+            Mockito.verify(p, Mockito.atLeastOnce()).getAge(date);
+            Mockito.verify(p, Mockito.never()).getFirstName();
+            Mockito.verify(p, Mockito.never()).getName();
+        }
+    }
 }
