@@ -42,6 +42,11 @@ public class TestOutilsPerson {
         Assert.assertEquals(45, res.get(1).getAge(date));
     }
 
+    @Test(expected = IllegalArgumentException.class)
+    public void testGetPersonIntervalError(){
+        tool.getPersonInterval(persons, date, 50, 25);
+    }
+
     @Test
     public void testResearchOlder(){
         Assert.assertEquals(45, tool.researchOlder(persons, date));
