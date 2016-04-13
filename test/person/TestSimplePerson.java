@@ -1,7 +1,7 @@
 import people.SimplePerson;
 
 /**
- * Created by gaetan on 06/04/16.
+ * @author ROCHE Gaetan & PLATTEAU Jonathan
  */
 public class TestSimplePerson extends TestIPerson{
     public void initialize(){

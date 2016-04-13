@@ -4,9 +4,10 @@ import java.util.ArrayList;
 import java.util.GregorianCalendar;
 
 /**
- * Created by gaetan on 06/04/16.
+ * @author ROCHE Gaetan & PLATTEAU Jonathan
  */
-public class OutilsPerson {
+
+class OutilsPerson {
 
     /**
      *
@@ -16,7 +17,7 @@ public class OutilsPerson {
      * @param ageMax int
      * @return ArrayList<IPerson> dont l'age est compris entre ageMin et ageMax
      */
-    public ArrayList<IPerson> getPersonInterval(ArrayList<IPerson> allPersons, GregorianCalendar date, int ageMin, int ageMax){
+    ArrayList<IPerson> getPersonInterval(ArrayList<IPerson> allPersons, GregorianCalendar date, int ageMin, int ageMax){
         if(ageMin>ageMax)
             throw new IllegalArgumentException();
         ArrayList<IPerson> res = new ArrayList<>();
@@ -24,8 +25,7 @@ public class OutilsPerson {
             try {
                 if (person.getAge(date) <= ageMax && person.getAge(date) >= ageMin)
                     res.add(person);
-            } catch (Exception e) {
-            }
+            } catch (Exception ignored) {}
         }
         return res;
     }
@@ -36,14 +36,13 @@ public class OutilsPerson {
      * @param date GregorianCalendar
      * @return int l'age de la personne la plus vieille à la date donnée
      */
-    public int researchOlder(ArrayList<IPerson> allPersons, GregorianCalendar date){
+    int researchOlder(ArrayList<IPerson> allPersons, GregorianCalendar date){
         int ageMax = 0;
         for(IPerson person : allPersons)
             try {
                 if (person.getAge(date) > ageMax)
                     ageMax = person.getAge(date);
-            }catch(Exception e){
-            }
+            }catch(Exception ignored) {}
         return ageMax;
     }
 }

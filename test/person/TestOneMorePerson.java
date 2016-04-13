@@ -1,7 +1,7 @@
 import people.OneMorePerson;
 
 /**
- * Created by gaetan on 06/04/16.
+ * @author ROCHE Gaetan & PLATTEAU Jonathan
  */
 public class TestOneMorePerson extends TestIPerson {
     public void initialize(){

@@ -1,7 +1,7 @@
 import people.SmallCodePerson;
 
 /**
- * Created by gaetan on 06/04/16.
+ * @author ROCHE Gaetan & PLATTEAU Jonathan
  */
 public class TestSmallCodePerson extends TestIPerson{
     public void initialize(){

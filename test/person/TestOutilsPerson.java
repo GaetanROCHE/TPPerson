@@ -8,12 +8,12 @@ import java.util.ArrayList;
 import java.util.GregorianCalendar;
 
 /**
- * Created by gaetan on 06/04/16.
+ * @author ROCHE Gaetan & PLATTEAU Jonathan
  */
 public class TestOutilsPerson {
-    ArrayList<IPerson> persons;
-    GregorianCalendar date;
-    OutilsPerson tool;
+    private ArrayList<IPerson> persons;
+    private GregorianCalendar date;
+    private OutilsPerson tool;
 
     @Before
     public void initialize(){

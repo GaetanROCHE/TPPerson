@@ -1,7 +1,7 @@
 import people.YetAnotherPerson;
 
 /**
- * Created by jonat on 06/04/2016.
+ * @author ROCHE Gaetan & PLATTEAU Jonathan
  */
 public class TestYetAnotherPerson extends TestIPerson {
     public void initialize(){
